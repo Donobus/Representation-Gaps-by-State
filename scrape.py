@@ -63,8 +63,8 @@ def html_table_by_id(
     return pd.DataFrame()
 
 def html_table_by_headers(
-    url: str,
     table_headers: list[str],
+    url: str,
     index: int = 0,
     show_results: bool = True
 ) -> pd.DataFrame:
