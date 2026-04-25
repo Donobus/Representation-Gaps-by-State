@@ -11,7 +11,7 @@ house_df.fillna("N/A", inplace = True)
 redistricting_df.fillna("N/A", inplace = True)
 redistricting_df = redistricting_df[~redistricting_df["State"].str.contains("New map")]
 useless_index = redistricting_df.index[redistricting_df["State"] == "Net"][0]
-redistricting_df = redistricting_df.loc[:useless_index]
+redistricting_df = redistricting_df.loc[:useless_index - 1]
 
 senate_df.to_csv("senate_members.csv", index = False)
 house_df.to_csv("house_members.csv", index = False)
